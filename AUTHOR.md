@@ -14,13 +14,13 @@ _Add your preferred professional title and a two-sentence introduction here._
 
 - LinkedIn: _Add your profile URL._
 - Personal website: _Add your portfolio URL, if applicable._
-- Public contact: _Add only the email address or contact method you want to publish._
+- Public contact: yi1.peng913@gmail.com
 
 ## Project introduction
 
-**Explainable Customer Churn MLOps Platform** — a portfolio project covering reproducible model comparison, global and individual explanations, Airflow orchestration, explicit artifact selection, and a Dockerized prediction API.
+**Explainable Customer Churn MLOps Platform** — a project covering reproducible model comparison, global and individual explanations, Airflow orchestration, explicit artifact selection, and a Dockerized prediction API.
 
-Public demonstration data is independently generated synthetic data. Resume wording and interview notes are available in [English](docs/PORTFOLIO.md) and [Chinese](docs/PORTFOLIO_中文.md).
+Public demonstration data is independently generated synthetic data. 
 
 ## Credits
 
