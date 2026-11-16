@@ -1,0 +1,11 @@
+name: telecom-churn-mlops
+services:
+  api:
+    build: .
+    environment:
+      CHURN_MODEL_PATH: /app/runtime/model.pkl
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./runtime:/app/runtime:ro
+    restart: unless-stopped

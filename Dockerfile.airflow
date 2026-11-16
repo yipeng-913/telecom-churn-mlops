@@ -1,0 +1,7 @@
+ARG AIRFLOW_VERSION=3.4.0
+FROM apache/airflow:${AIRFLOW_VERSION}
+ARG AIRFLOW_VERSION
+COPY pyproject.toml README.md /tmp/churn-package/
+COPY src /tmp/churn-package/src
+RUN pip install --no-cache-dir "apache-airflow==${AIRFLOW_VERSION}" /tmp/churn-package && pip check
+ENV CHURN_PROJECT_ROOT=/opt/airflow MPLCONFIGDIR=/tmp/churn-matplotlib

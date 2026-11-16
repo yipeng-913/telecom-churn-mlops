@@ -1,0 +1,33 @@
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      MPLCONFIGDIR: /tmp/matplotlib
+      OPENBLAS_NUM_THREADS: '2'
+      OMP_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e '.[dev]'
+      - run: make lint test
+      - name: Run synthetic end-to-end lifecycle
+        run: |
+          churn-demo --root . --rows 1200
+          churn-pipeline run --root . --run-id ci
+          python scripts/select_model.py --run-id ci
+          python scripts/smoke_api.py
+      - run: python -m build
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t telecom-churn:test .

@@ -1,0 +1,9 @@
+{
+  "records": [{
+    "eqpdays": 440, "months": 14, "mou_Mean": 120,
+    "change_mou": -160, "custcare_Mean": 2, "rev_Mean": 95,
+    "totmrc_Mean": 90, "drop_vce_Mean": 8, "uniqsubs": 2,
+    "hnd_price": 199, "area": "North", "dualband": "Y"
+  }],
+  "explain": true
+}

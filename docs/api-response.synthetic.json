@@ -1,0 +1,47 @@
+{
+  "health": {
+    "status": "ok",
+    "model": "catboost"
+  },
+  "example_prediction": {
+    "model_sha256": "1c6692dd50363e83c39410714836468b72ad823fc711909bd3c3c70a488e7f95",
+    "threshold": 0.36536819171412055,
+    "predictions": [
+      {
+        "churn_probability": 0.651724001121732,
+        "predicted_churn": 1,
+        "base_log_odds": -0.052561448553093644,
+        "top_factors": [
+          {
+            "feature": "change_mou",
+            "contribution_log_odds": 0.3604174150698139
+          },
+          {
+            "feature": "eqpdays",
+            "contribution_log_odds": 0.15444164693025242
+          },
+          {
+            "feature": "mou_Mean",
+            "contribution_log_odds": 0.09636429089219581
+          },
+          {
+            "feature": "custcare_Mean",
+            "contribution_log_odds": 0.024948480308905598
+          },
+          {
+            "feature": "rev_Mean",
+            "contribution_log_odds": 0.015849540929782982
+          }
+        ],
+        "other_contribution_log_odds": 0.027165969902756104
+      }
+    ]
+  },
+  "checks": [
+    "health",
+    "live_prediction",
+    "SHAP_additivity",
+    "422_invalid_schema",
+    "OpenAPI_docs"
+  ]
+}

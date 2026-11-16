@@ -1,0 +1,21 @@
+# Use with the user's initialized Airflow 3.4 Compose cluster, not with compose.yaml.
+x-churn-service: &churn-service
+  build:
+    context: .
+    dockerfile: Dockerfile.airflow
+  environment:
+    CHURN_PROJECT_ROOT: /opt/airflow
+    MPLCONFIGDIR: /tmp/churn-matplotlib
+  volumes:
+    - ./data:/opt/airflow/data
+    - ./models:/opt/airflow/models
+    - ./reports:/opt/airflow/reports
+    - ./dags:/opt/airflow/dags:ro
+services:
+  airflow-apiserver: *churn-service
+  airflow-scheduler: *churn-service
+  airflow-dag-processor: *churn-service
+  airflow-worker: *churn-service
+  airflow-triggerer: *churn-service
+  airflow-init: *churn-service
+  airflow-cli: *churn-service

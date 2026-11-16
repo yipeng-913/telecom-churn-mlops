@@ -1,0 +1,101 @@
+{
+  "data": "independently generated synthetic telecom data",
+  "rows": 6000,
+  "generator_seed": 2026,
+  "split_seed": 42,
+  "features": 12,
+  "metrics": {
+    "rows": 1200,
+    "prevalence": 0.47833333333333333,
+    "average_precision": 0.738898424409236,
+    "roc_auc": 0.7605740223308212,
+    "log_loss": 0.6157563676973308,
+    "brier": 0.2125086176862839,
+    "threshold": 0.36536819171412055,
+    "precision": 0.56975505857295,
+    "recall": 0.9320557491289199,
+    "f1": 0.7072042300066094,
+    "confusion_matrix": [
+      [
+        222,
+        404
+      ],
+      [
+        39,
+        535
+      ]
+    ],
+    "top20_count": 240,
+    "top20_precision": 0.7958333333333333,
+    "top20_lift": 1.6637630662020906,
+    "top20_capture": 0.3327526132404181,
+    "model_name": "catboost",
+    "source_sha256": "6027dacf15f99476f18c64a9aeb88ea2e010cd51f91276b29290ecbdd59fcf44",
+    "model_sha256": "1c6692dd50363e83c39410714836468b72ad823fc711909bd3c3c70a488e7f95",
+    "bootstrap_95_percentile_ci": {
+      "roc_auc": [
+        0.7342244146366791,
+        0.7868818672585345
+      ],
+      "average_precision": [
+        0.7039034781543035,
+        0.7754344207415936
+      ]
+    },
+    "validation": {
+      "logistic": {
+        "rows": 1200,
+        "prevalence": 0.4791666666666667,
+        "average_precision": 0.6498754002450937,
+        "roc_auc": 0.6930198260869566,
+        "log_loss": 0.638438733042618,
+        "brier": 0.22300553898223313,
+        "threshold": 0.39150457489339735,
+        "precision": 0.6088117489986649,
+        "recall": 0.7930434782608695,
+        "f1": 0.6888217522658611,
+        "confusion_matrix": [
+          [
+            332,
+            293
+          ],
+          [
+            119,
+            456
+          ]
+        ],
+        "top20_count": 240,
+        "top20_precision": 0.675,
+        "top20_lift": 1.4086956521739131,
+        "top20_capture": 0.2817391304347826
+      },
+      "catboost": {
+        "rows": 1200,
+        "prevalence": 0.4791666666666667,
+        "average_precision": 0.7055285596705785,
+        "roc_auc": 0.7301133913043479,
+        "log_loss": 0.6268588788916374,
+        "brier": 0.21777521869178107,
+        "threshold": 0.36536819171412055,
+        "precision": 0.5600425079702445,
+        "recall": 0.9165217391304348,
+        "f1": 0.6952506596306068,
+        "confusion_matrix": [
+          [
+            211,
+            414
+          ],
+          [
+            48,
+            527
+          ]
+        ],
+        "top20_count": 240,
+        "top20_precision": 0.7708333333333334,
+        "top20_lift": 1.608695652173913,
+        "top20_capture": 0.3217391304347826
+      }
+    },
+    "catboost_best_iteration": 12
+  }
+}
