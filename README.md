@@ -8,9 +8,8 @@ An end-to-end customer churn portfolio project: reproducible experiments, signed
 
 ## Author
 
-**Yi Peng · [@yipeng-913](https://github.com/yipeng-913)** — portfolio owner and maintainer.
+**Yi Peng · [@yipeng-913](https://github.com/yipeng-913)**
 
-Personal introduction, LinkedIn and a public contact can be added in [AUTHOR.md](AUTHOR.md). This is an individual portfolio project; the public demo is based on synthetic data.
 
 ## ML models
 
