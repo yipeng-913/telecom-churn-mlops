@@ -1,6 +1,6 @@
 # Validation record
 
-Executed in the development cloud workspace on 16 November 2026. **GitHub publication and GitHub-hosted CI have not yet occurred.**
+Executed in the development cloud workspace on 16 November 2026. These local checks were completed before initial publication. Check [GitHub Actions](https://github.com/yipeng-913/telecom-churn-mlops/actions) for the current remote CI status.
 
 | Check | Observed result |
 |---|---|
@@ -19,4 +19,4 @@ The initial ordinary Docker build encountered this cloud workspace's HTTPS proxy
 
 Airflow's SQLite test emitted an async connection-cleanup warning after all tasks and the run reached success, with process exit code zero. No success is claimed for the user's separate Windows/WSL2 Docker Desktop cluster until the local instructions are run there.
 
-The running test container was removed after verification. There is no persistent public hosting endpoint or GitHub Actions success claim. The GitHub workflow is configured for test, synthetic integration/API smoke and image build after publication.
+The running test container was removed after verification. There is no persistent public API hosting endpoint. The GitHub workflow runs tests, synthetic integration/API smoke and image build; its live execution status is reported in GitHub Actions.

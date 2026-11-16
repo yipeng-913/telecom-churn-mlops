@@ -5,6 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "telecom-churn-mlops"
 version = "1.0.0"
+authors = [{name = "Yi Peng"}]
 description = "Explainable customer churn ML lifecycle with Airflow, Docker and a batch prediction API"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"

@@ -6,6 +6,21 @@ An end-to-end customer churn portfolio project: reproducible experiments, signed
 
 > The public demo uses independently generated **synthetic data**. It demonstrates engineering and evaluation methodology, not real-world predictive performance or measured retention impact. No third-party assessment document or private customer records are included.
 
+## Author
+
+**Yi Peng · [@yipeng-913](https://github.com/yipeng-913)** — portfolio owner and maintainer.
+
+Personal introduction, LinkedIn and a public contact can be added in [AUTHOR.md](AUTHOR.md). This is an individual portfolio project; the public demo is based on synthetic data.
+
+## ML models
+
+- **Baseline — Logistic Regression:** train-fitted median imputation, missing-value indicators, standardization and one-hot categorical encoding.
+- **Selected demo model — CatBoostClassifier:** gradient-boosted decision trees for nonlinear interactions and categorical/missing inputs. Settings: depth 6, learning rate 0.05, L2 5, up to 1,200 trees; validation-AUC early stopping with patience 100. The public run retained 13 trees (best iteration 12, zero-based).
+- **Selection:** choose the candidate by validation average precision (AP); select the decision threshold by validation F1 before evaluating the untouched hold-out.
+- **Explanations — SHAP:** signed contributions to the model's log odds. SHAP is an explanation method, not an additional predictive model.
+
+The public **synthetic-data** demo selected CatBoost: validation AP 0.7055 versus the logistic baseline's 0.6499; hold-out AP 0.7389 and ROC-AUC 0.7606. See [RESULTS.md](docs/RESULTS.md) for reproducibility and limitations. A future dataset may select a different candidate.
+
 ## What you can run
 
 - Generate a deterministic synthetic telecom dataset; train and compare logistic regression and CatBoost.
@@ -30,7 +45,7 @@ make demo
 make serve
 ```
 
-The repository URL above is the intended publication target. If you received the ZIP before publication, extract it and start at the `cd` step using its extracted directory.
+If using the source ZIP, extract it and start at the `cd` step using its extracted directory.
 
 Open [API documentation](http://localhost:8000/docs) and [health](http://localhost:8000/health). `make demo` writes local data and artifacts, then explicitly selects the evaluated artifact into `runtime/model.pkl`. It refuses to overwrite an existing raw dataset. To rerun generation, use a fresh directory/root rather than deleting private data.
 
