@@ -127,8 +127,3 @@ python -m build
 
 GitHub Actions installs the package on Python 3.12, runs lint and tests, trains on synthetic integration data, then builds the deployment image. CI success can be claimed only after the workflow runs on the published repository. See [validation evidence](docs/VALIDATION.md) for checks actually executed before publication.
 
-## Portfolio and limitations
-
-This is an individual portfolio implementation, not a claim of production ownership or realized business uplift. The current evaluation is a stratified random hold-out. Future-cohort validation, label maturity, source freshness, representative prevalence, intervention economics, drift monitoring and a governed promotion policy are required for operational use. MLflow, a business feature database and cloud infrastructure are extension points, not implemented components.
-
-[中文说明及简历表述](docs/PORTFOLIO_中文.md) · [English CV and interview notes](docs/PORTFOLIO.md) · [MIT license](LICENSE)
